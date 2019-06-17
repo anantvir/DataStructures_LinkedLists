@@ -75,10 +75,3 @@ lst.add_item_at_rear(2)
 lst.add_item_at_rear(5)
 lst.add_item_at_rear(8)
 
-print(lst.delete_item_from_front())
-print(lst.delete_item_from_front())
-print(lst.delete_item_from_front())
-print(lst.delete_item_from_front())
-# temp = lst.traverse_linked_list()
-# for x in range(len(temp)):
-#     print(temp[x])
