@@ -1,3 +1,4 @@
+# Author - Anantvir Singh, references:= Data Structures book by Seymour Lipschutz
 class Node:
     def __init__(self,info,link= None):
         self.info = info
