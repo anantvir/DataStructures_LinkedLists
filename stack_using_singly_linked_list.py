@@ -8,7 +8,7 @@ class LinkedStack:
         self.head= None
         self.current_ptr= None
         self.size = 0
-        self.tempLst =[]
+        self.tempLst =[]        # created just to test if LinkedStack working properly(Not compulsory)
     
     def __len__(self):
         return self.size
