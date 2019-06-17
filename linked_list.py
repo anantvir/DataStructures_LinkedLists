@@ -43,10 +43,12 @@ class LinkedList:
             newNode = Node(item)
             newNode.link = self.head
             self.head = newNode
+            self.size += 1
         else:
             newNode = Node(item)
             newNode.link = loc.link
             loc.link = newNode
+            self.size += 1
         return newNode
     
     def delete_item_from_front(self):
