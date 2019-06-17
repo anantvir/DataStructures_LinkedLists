@@ -31,12 +31,6 @@ class LinkedStack:
             self.tempLst.append(item)
         return self.tempLst
 
-        # newNode = Node(item)
-        # self.head = newNode
-        # self.size += 1
-        # self.tempLst.append(item)
-        # return self.tempLst
-    
     def top(self):
         if self.head == None:
             print('Stack empty ! cannot return top element')
