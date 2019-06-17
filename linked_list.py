@@ -1,4 +1,4 @@
-# Author - Anantvir Singh, references:= Data Structures book by Seymour Lipschutz
+# Author - Anantvir Singh, reference:= Data Structures in C by Seymour Lipschutz
 class Node:
     def __init__(self,info,link= None):
         self.info = info
@@ -36,6 +36,17 @@ class LinkedList:
             newNode.link = self.head
             self.head = newNode
             self.size += 1
+        return newNode
+    
+    def add_item_after_a_given_node(self,item,loc):      # loc = location of new given node
+        if loc == None:
+            newNode = Node(item)
+            newNode.link = self.head
+            self.head = newNode
+        else:
+            newNode = Node(item)
+            newNode.link = loc.link
+            loc.link = newNode
         return newNode
     
     def delete_item_from_front(self):
