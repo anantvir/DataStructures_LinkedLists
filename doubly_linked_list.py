@@ -34,7 +34,7 @@ class DoublyLinkedList:
             newNode.BACKWARD_LINK = None
             self.size += 1
             self.temp_list.append(item)
-        return self.temp_list
+        return self.temp_list,newNode
 
     def insert_item_at_tail(self,item):     # similar approach can be followed for insertion at any given location LOC
         if self.tail == None:
@@ -52,6 +52,14 @@ class DoublyLinkedList:
             self.size += 1
             self.temp_list.append(item)
         return self.temp_list
+
+    def insert_item_between_nodes(self,item,LOCA,LOCB):     # LOCA = predecessor, LOCB = Successor
+        newNode = Node(item)
+        newNode.FORWARD_LINK = LOCB
+        newNode.BACKWARD_LINK = LOCA
+        LOCA.FORWARD_LINK = newNode
+        LOCB.BACKWARD_LINK = newNode
+        return newNode.info
     
     def traverse_list(self):
         if self.head == None:
@@ -78,4 +86,5 @@ print(lst.insert_item_at_tail(23))
 print(lst.insert_item_at_tail(76))
 print(lst.insert_item_at_tail(14))
 lst.traverse_list()
+
         
