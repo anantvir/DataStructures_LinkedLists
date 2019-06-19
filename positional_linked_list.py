@@ -101,6 +101,7 @@ class PositionalList(DoublyLinkedList):
         else:
             return self.Position(self,node)     # returns position of node given to this method
 
+    #---------------Accessor methods------------------------------------------------------------------------
     def first(self):                            # returns position of 1st node i.e node after the header
         return self._make_position(self.head.FORWARD_LINK)
     
